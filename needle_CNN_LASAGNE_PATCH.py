@@ -457,7 +457,7 @@ if train_or_load_network == "train":
     print("  test accuracy:\t\t{:.2f} %".format(
         test_acc / test_batches * 100))
 
-elif train_or_load_network == "train":
+elif train_or_load_network == "load":
     with np.load(network_pars_file) as f:
         param_values = [f['arr_%d' % i] for i in range(len(f.files))]
     lasagne.layers.set_all_param_values(network, param_values)
