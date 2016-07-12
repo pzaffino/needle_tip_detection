@@ -304,7 +304,7 @@ output_label = '../test_label.nrrd'
 # GENERATE OR LOAD PATCHES
 if load_or_generate_data == "generate":
     X_pos, y_pos, X_neg, y_neg = data_for_CNN(root_folder_data, half_patch_size=half_patch_size)
-elif load_or_generate_data == "load"
+elif load_or_generate_data == "load":
     saved_data = np.load(storage_patches_file)
     X_pos, y_pos, X_neg, y_neg = saved_data['arr_0'], saved_data['arr_1'], saved_data['arr_2'], saved_data['arr_3']
 
